@@ -70,3 +70,14 @@ class HomePageLocators:
         (By.ID, "accordion__panel-6"),
         (By.ID, "accordion__panel-7")
     ]
+комент ревьюера
+Необходимо исправить здесь и далее: не стоит использовать в локаторах путь от рута, абсолютный путь или индексы элемента. Это делает локатор очень хрупким
+    """Хедер"""
+    logo_yandex = (By.XPATH, ".//a[@class = 'Header_LogoYandex__3TSOI']")
+    logo_scooter = (By.XPATH, ".//a[@class = 'Header_LogoScooter__3lsAR']")
+    order_button = (By.XPATH, "(.//button[text() = 'Заказать'])[1]")
+
+class HomePageLocators:
+    """Главная страница сервиса"""
+    home_page_title = (By.XPATH, ".//div[@class = 'Home_Header__iJKdX']")
+    order_button = (By.XPATH, "(//button[text() = 'Заказать'])[2]")
