@@ -20,7 +20,11 @@ class OrderPageLocators:
     gray_color_scooter_check = (By.ID, 'grey')
     comment_field = (By.XPATH, ".//input[@placeholder= 'Комментарий для курьера']")
     back_button = (By.XPATH, ".//button[text() = 'Назад']")
-    order_button = (By.XPATH, "(.//button[text() = 'Заказать'])[2]")
+    # Исправленный локатор: ищем кнопку в контексте формы (если есть уникальный родитель)
+    # Например, используем класс Order_Content (уточните по реальной вёрстке)
+    order_button = (By.XPATH, "//div[contains(@class, 'Order_Content')]//button[text()='Заказать']")
+    # Если уникального контейнера нет, подойдёт:
+    # order_button = (By.XPATH, "//button[text()='Заказать']")
 
     # Окно подтверждения заказа
     no_button = (By.XPATH, ".//button[text() = 'Нет']")
